@@ -19,6 +19,23 @@ func main() {
 
 	fmt.Printf("Functional\n\n"+
 		"Original sequence: %v\n"+
-		"Max Increasing Subsequence: %v\n",
+		"Max Increasing Subsequence: %v\n\n",
 		sequence, maxIncreasingSubsequence)
+
+	arr := []int{1, 2, 4, 5, 7, 8, 9}
+	target := 9
+
+	targetIndex := tasks.BinarySearchImperative(arr, target)
+
+	fmt.Printf("Imperative\n\n"+
+		"Array: %v\n"+
+		"Target: %d\n"+
+		"Target index: %d\n", arr, target, targetIndex)
+
+	targetIndex = tasks.BinarySearchFunctional(arr, target, 0, len(arr))
+
+	fmt.Printf("Imperative\n\n"+
+		"Array: %v\n"+
+		"Target: %d\n"+
+		"Target index: %d\n", arr, target, targetIndex)
 }
